@@ -1,5 +1,5 @@
-import Users from './users.mjs';
+import Pipeline from './pipeline.mjs';
 
 export default {
-  Users
+  Pipeline
 };

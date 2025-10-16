@@ -69,7 +69,7 @@ const Server = class Server {
   }
 
   routes() {
-    new routes.Users(this.app, this.connect);
+    new routes.Pipeline(this.app);
 
     this.app.use((req, res) => {
       res.status(404).json({
@@ -86,7 +86,7 @@ const Server = class Server {
 
   async run() {
     try {
-      await this.dbConnect();
+      // await this.dbConnect();
       this.security();
       this.middleware();
       this.routes();
